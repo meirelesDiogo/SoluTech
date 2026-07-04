@@ -4,8 +4,55 @@ $paginaAtual = 'contato';
 $enviado = false;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Em um cenário real, aqui você enviaria um e-mail (ex: PHPMailer) ou salvaria em tabela de contatos.
-    $enviado = true;
+
+    $nome = trim($_POST['nome']);
+    $email = trim($_POST['email']);
+    $assunto = trim($_POST['assunto']);
+    $mensagem = trim($_POST['mensagem']);
+
+    try {
+
+        $mail = require __DIR__ . '/config/mail.php';
+
+$mail->addAddress($email, $nome);
+
+$mail->isHTML(true);
+
+$mail->Subject = 'Recebemos sua mensagem!';
+
+$mail->Body = "
+<div style='font-family:Arial,sans-serif;max-width:600px;margin:auto;'>
+
+    <h2 style='color:#f1c40f;'>Olá, {$nome}!</h2>
+
+    <p>Recebemos sua mensagem com sucesso.</p>
+
+    <p>Nossa equipe da <strong>SoluTech IA</strong> responderá o mais breve possível.</p>
+
+    <hr>
+
+    <h3>Sua mensagem</h3>
+
+    <p>{$mensagem}</p>
+
+    <br>
+
+    <p>Atenciosamente,</p>
+
+    <h3>SoluTech IA</h3>
+
+</div>";
+
+$mail->send();
+
+        $enviado = true;
+
+    } catch (Exception $e) {
+
+        die($e->getMessage());
+
+    }
+
 }
 ?>
 <!DOCTYPE html>
