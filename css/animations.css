@@ -1,0 +1,108 @@
+/* =========================================================
+   SOLUTECH — animations.css
+   Animações reutilizáveis (Scroll Reveal, Fade, Slide, etc.)
+   ========================================================= */
+
+/* Elementos com [data-animate] começam ocultos e são revelados via JS
+   (scroll.js) quando entram na viewport, adicionando a classe .in-view */
+[data-animate] {
+  opacity: 0;
+  transition: opacity .8s ease, transform .8s ease;
+  will-change: opacity, transform;
+}
+
+[data-animate="fade-in"] { transform: translateY(0); }
+[data-animate="slide-up"] { transform: translateY(50px); }
+[data-animate="slide-left"] { transform: translateX(60px); }
+[data-animate="slide-right"] { transform: translateX(-60px); }
+
+[data-animate].in-view {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Delays escalonados para listas/grids */
+[data-delay="1"] { transition-delay: .1s; }
+[data-delay="2"] { transition-delay: .2s; }
+[data-delay="3"] { transition-delay: .3s; }
+[data-delay="4"] { transition-delay: .4s; }
+[data-delay="5"] { transition-delay: .5s; }
+
+/* Texto digitando */
+.typing-text::after {
+  content: '|';
+  animation: blink 1s step-start infinite;
+  color: var(--amarelo);
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Ícones animados (pulso leve) */
+.icon-pulse { animation: icon-pulse 2.4s ease-in-out infinite; }
+@keyframes icon-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+/* Glow em botões no hover (usado junto de .btn-primary) */
+.glow-hover:hover { animation: glow 1.4s ease-in-out infinite alternate; }
+@keyframes glow {
+  from { box-shadow: 0 0 10px rgba(255,193,7,.3); }
+  to   { box-shadow: 0 0 26px rgba(255,193,7,.55); }
+}
+
+/* Parallax simples via transform (controlado em JS) */
+.parallax { will-change: transform; }
+
+/* Skeleton loading */
+.skeleton {
+  background: linear-gradient(90deg, rgba(255,255,255,.04) 25%, rgba(255,255,255,.09) 37%, rgba(255,255,255,.04) 63%);
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.4s ease infinite;
+  border-radius: 8px;
+}
+@keyframes skeleton-loading {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+/* Spinner pequeno usado dentro de botões durante carregamento */
+.spinner-inline {
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(13,13,13,.3);
+  border-top-color: #0D0D0D;
+  animation: spin .8s linear infinite;
+  display: inline-block;
+}
+
+/* Toasts */
+.toast-container {
+  position: fixed;
+  top: 24px; right: 24px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.toast {
+  min-width: 280px;
+  background: var(--cor-secundaria, #1A1A1A);
+  border: 1px solid var(--borda, rgba(255,255,255,.08));
+  border-left: 4px solid var(--amarelo, #FFC107);
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  animation: toast-in .35s ease;
+  font-size: 14px;
+}
+.toast.error { border-left-color: #FF4B4B; }
+.toast.success { border-left-color: #2ecc71; }
+@keyframes toast-in {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.toast.fade-out { animation: toast-out .35s ease forwards; }
+@keyframes toast-out {
+  to { opacity: 0; transform: translateX(40px); }
+}
