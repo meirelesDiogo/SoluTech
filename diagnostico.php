@@ -35,32 +35,41 @@ $paginaAtual = 'diagnostico';
           <div class="form-grid">
             <div class="form-group">
               <label for="nome">Nome completo</label>
-              <input type="text" id="nome" name="nome"
-                placeholder="Digite seu nome completo" required>
+              <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
             </div>
 
             <div class="form-group">
               <label for="empresa">Empresa</label>
-              <input type="text" id="empresa" name="empresa"
-                placeholder="Digite o nome da sua empresa" required>
+              <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da sua empresa" required>
             </div>
 
             <div class="form-group">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email"
-                placeholder="exemplo@empresa.com" required>
+              <input type="email" id="email" name="email" placeholder="exemplo@empresa.com" required>
             </div>
 
             <div class="form-group">
               <label for="telefone">Telefone</label>
-              <input type="text" id="telefone" name="telefone"
-                placeholder="(11) 99999-9999" required>
+              <input type="text" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
             </div>
 
+            <script>
+              document.getElementById('telefone').addEventListener('input', function(e) {
+                let valor = e.target.value.replace(/\D/g, '');
+
+                if (valor.length > 11) {
+                  valor = valor.substring(0, 11);
+                }
+
+                valor = valor.replace(/^(\d{2})(\d)/g, '($1) $2');
+                valor = valor.replace(/(\d{5})(\d)/, '$1-$2');
+
+                e.target.value = valor;
+              });
+            </script>
             <div class="form-group">
               <label for="cidade">Cidade</label>
-              <input type="text" id="cidade" name="cidade"
-                placeholder="Digite sua cidade" required>
+              <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required>
             </div>
             <div class="form-group">
               <label for="segmento">Segmento</label>
