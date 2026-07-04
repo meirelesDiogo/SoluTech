@@ -10,6 +10,7 @@ $paginaAtual = 'diagnostico';
   <title>Diagnóstico com IA — SoluTech</title>
   <meta name="description" content="Conte o problema da sua empresa e receba um diagnóstico tecnológico gerado por Inteligência Artificial.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
@@ -30,7 +31,7 @@ $paginaAtual = 'diagnostico';
         <div class="form-grid">
           <div class="form-group">
             <label for="nome">Nome completo</label>
-            <input type="text" id="nome" name="nome" required>
+            <input type="text" id="nome" name="nome" placeholder="Informe Seu Nome Compelto " required>
           </div>
           <div class="form-group">
             <label for="empresa">Empresa</label>

@@ -37,6 +37,7 @@ $pontuacao = max(0, min(100, (int)$diag['pontuacao']));
   <title>Resultado do Diagnóstico — SoluTech</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
   <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>

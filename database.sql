@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS clientes (
     nome VARCHAR(150) NOT NULL,
     empresa VARCHAR(150),
     email VARCHAR(150) NOT NULL,
+    senha VARCHAR(255) NULL;
     telefone VARCHAR(30),
     cidade VARCHAR(100),
     segmento VARCHAR(100),
@@ -91,3 +92,8 @@ CREATE TABLE IF NOT EXISTS orcamentos (
 CREATE INDEX idx_clientes_nome ON clientes(nome);
 CREATE INDEX idx_orcamentos_status ON orcamentos(status);
 CREATE INDEX idx_diagnosticos_cliente ON diagnosticos(cliente_id);
+
+
+
+
+
