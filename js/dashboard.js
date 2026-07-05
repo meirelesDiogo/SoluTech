@@ -63,10 +63,10 @@ function confirmarExclusao(formOuUrl, mensagem = 'Esta ação não poderá ser d
     text: mensagem,
     icon: 'warning',
     showCancelButton: true,
-    confirmButtonColor: '#FF6B00',
-    cancelButtonColor: '#333',
-    background: '#1A1A1A',
-    color: '#FFFFFF',
+    confirmButtonColor: '#2563EB', // azul-medio (mesma cor dos botões primários do site)
+    cancelButtonColor: '#64748B',  // texto-secundario
+    background: '#FFFFFF',
+    color: '#334155',              // texto
     confirmButtonText: 'Sim, excluir',
     cancelButtonText: 'Cancelar',
   }).then((resultado) => {

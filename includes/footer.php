@@ -13,29 +13,37 @@
           Soluções tecnológicas inteligentes para empresas que querem crescer com eficiência e inovação.
         </p>
         <div class="social-icons">
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="social-instagram" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="social-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-x" target="_blank" rel="noopener" aria-label="X (Twitter)" title="X (Twitter)">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://wa.me/5531999999999" class="social-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
         </div>
       </div>
 
       <div>
         <h4>Links Úteis</h4>
         <ul>
-          <li><a href="index.php">Home</a></li>
-          <li><a href="sobre.php">Sobre</a></li>
-          <li><a href="servicos.php">Serviços</a></li>
-          <li><a href="diagnostico.php">Diagnóstico IA</a></li>
+          <li><a href="index.php"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+          <li><a href="sobre.php"><i class="fa-solid fa-angle-right"></i> Sobre</a></li>
+          <li><a href="servicos.php"><i class="fa-solid fa-angle-right"></i> Serviços</a></li>
+          <li><a href="diagnostico.php"><i class="fa-solid fa-angle-right"></i> Diagnóstico IA</a></li>
         </ul>
       </div>
 
       <div>
         <h4>Contato</h4>
         <ul>
-          <li><a href="mailto:contato@solutech.com">contato@solutech.com</a></li>
-          <li><a href="tel:+5531999999999">(31) 99999-9999</a></li>
-          <li><a href="contato.php">Fale conosco</a></li>
+          <li><a href="mailto:contato@solutech.com"><i class="fa-solid fa-envelope"></i> contato@solutech.com</a></li>
+          <li><a href="tel:+5531999999999"><i class="fa-solid fa-phone"></i> (31) 99999-9999</a></li>
+          <li><a href="contato.php"><i class="fa-solid fa-comment-dots"></i> Fale conosco</a></li>
         </ul>
       </div>
 
