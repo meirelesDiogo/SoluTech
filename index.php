@@ -21,6 +21,7 @@ $tituloPagina = 'SoluTech — Soluções Inteligentes para Empresas';
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
@@ -41,7 +42,7 @@ $tituloPagina = 'SoluTech — Soluções Inteligentes para Empresas';
     </div>
 
     <div class="hero-illustration floating">
-      <i class="fa-solid fa-microchip" style="font-size:120px; background:linear-gradient(135deg,#FFC107,#FF6B00); -webkit-background-clip:text; background-clip:text; color:transparent;"></i>
+      <i class="fa-solid fa-microchip" style="font-size:120px; background:linear-gradient(135deg,#00C6FF,#0072FF); -webkit-background-clip:text; background-clip:text; color:transparent;"></i>
     </div>
   </div>
 </section>

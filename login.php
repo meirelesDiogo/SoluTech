@@ -33,13 +33,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 <div id="loader"><div class="loader-spinner"></div></div>
 
 <div class="login-wrapper">
   <div class="login-visual">
-    <i class="fa-solid fa-microchip floating" style="font-size:180px; background:linear-gradient(135deg,#FFC107,#FF6B00); -webkit-background-clip:text; background-clip:text; color:transparent;"></i>
+    <i class="fa-solid fa-microchip floating" style="font-size:180px; background:linear-gradient(135deg,#00C6FF,#0072FF); -webkit-background-clip:text; background-clip:text; color:transparent;"></i>
   </div>
 
   <div class="login-form-side">
